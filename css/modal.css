@@ -12,20 +12,24 @@
   z-index: 999;
 
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
 .modal {
   position: relative;
 
-  background-color: #fff;
+  background-color: #fcfcfc;
   border-radius: 4px;
   padding: 72px 24px 24px;
   width: 408px;
@@ -193,7 +197,7 @@
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
+  color: #8e8f99;
 }
 
 .privacy-link {
@@ -234,9 +238,7 @@
 
   cursor: pointer;
 
-  transition:
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-send:hover,
